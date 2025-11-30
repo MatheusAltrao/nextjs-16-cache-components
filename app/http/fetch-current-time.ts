@@ -17,7 +17,7 @@ export async function fetchCurrentTimeWithUseCache() {
 
 export async function fetchCurrentTimeWithUseCacheAndCacheLife() {
     "use cache"
-    cacheLife("days")
+    cacheLife("seconds")
 
     const response = await fetch(BASE_URL)
     const data = await response.json();

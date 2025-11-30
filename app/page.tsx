@@ -13,7 +13,11 @@ export default function Home() {
 
       <CurrentTimeWithUseCache />
 
-      <CurrentTimeWithUseCacheAndCacheLife />
+      <Suspense fallback={<div>Loading cache seconds...</div>}>
+        <CurrentTimeWithUseCacheAndCacheLife />
+      </Suspense>
+
+
 
       <div className="bg-zinc-900 rounded-md" >
         <CurrentTimeWithUseCacheAndCacheTag />
