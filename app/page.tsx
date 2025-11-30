@@ -17,8 +17,6 @@ export default function Home() {
         <CurrentTimeWithUseCacheAndCacheLife />
       </Suspense>
 
-
-
       <div className="bg-zinc-900 rounded-md" >
         <CurrentTimeWithUseCacheAndCacheTag />
         <UpdateCurrentTimeButton onUpdate={onUpdateCurrentTag} />
