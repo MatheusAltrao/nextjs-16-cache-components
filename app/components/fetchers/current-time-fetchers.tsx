@@ -19,7 +19,7 @@ export async function CurrentTimeWithUseCache() {
 
 export async function CurrentTimeWithUseCacheAndCacheLife() {
   const currentTimeWithUseCacheAndCacheLife = await fetchCurrentTimeWithUseCacheAndCacheLife()
-  return <CardCurrentTime title="UseCacheAndCacheLife seconds" value={currentTimeWithUseCacheAndCacheLife} />
+  return <CardCurrentTime title="UseCacheAndCacheLife Days" value={currentTimeWithUseCacheAndCacheLife} />
 }
 
 export async function CurrentTimeWithUseCacheAndCacheTag() {
@@ -32,7 +32,7 @@ export async function GetUserCookies() {
   const data = await cookies()
   const dateCookie = data.get('date')
   const formatCookies = JSON.stringify(dateCookie, null, 2)
-  return <CardCurrentTime title="get cookies" value={formatCookies} />
+  return <CardCurrentTime title="Get cookies" value={formatCookies} />
 }
 
 export async function onUpdateUserCookies() {}

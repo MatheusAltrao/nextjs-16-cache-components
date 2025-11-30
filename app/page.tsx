@@ -28,8 +28,10 @@ export default function Home() {
       </div>
 
       <Suspense fallback={<div>Loading cookies...</div>}>
-        <GetUserCookies />
-        <UpdateCookies />
+        <div className="bg-zinc-900 rounded-md">
+          <GetUserCookies />
+          <UpdateCookies />
+        </div>
       </Suspense>
     </div>
   )
