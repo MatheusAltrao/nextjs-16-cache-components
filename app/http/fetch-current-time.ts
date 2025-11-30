@@ -1,4 +1,4 @@
-import { cacheLife } from "next/cache";
+import { cacheLife, cacheTag } from "next/cache";
 import { BASE_URL } from "../const/base-url";
 
 export async function fetchCurrentTimeNoCache() {
@@ -17,7 +17,16 @@ export async function fetchCurrentTimeWithUseCache() {
 
 export async function fetchCurrentTimeWithUseCacheAndCacheLife() {
     "use cache"
-    cacheLife("seconds")
+    cacheLife("days")
+
+    const response = await fetch(BASE_URL)
+    const data = await response.json();
+    return data.time;
+}
+
+export async function fetchCurrentTimeWithUseCacheAndCacheTag() {
+    "use cache"
+    cacheTag('current-time')
 
     const response = await fetch(BASE_URL)
     const data = await response.json();
