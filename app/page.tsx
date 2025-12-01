@@ -1,3 +1,4 @@
+import Skeleton from '@/components/ui/skeleton'
 import { Suspense } from 'react'
 import {
   CurrentTimeNoCache,
@@ -12,13 +13,13 @@ import UpdateCurrentTimeButton from '../components/ui/update-current-time-button
 export default function Home() {
   return (
     <div className="p-6 w-full max-w-[800px] mx-auto space-y-4">
-      <Suspense fallback={<div>Loading no cache...</div>}>
+      <Suspense fallback={<Skeleton />}>
         <CurrentTimeNoCache />
       </Suspense>
 
       <CurrentTimeWithUseCache />
 
-      <Suspense fallback={<div>Loading cache seconds...</div>}>
+      <Suspense fallback={<Skeleton />}>
         <CurrentTimeWithUseCacheAndCacheLife />
       </Suspense>
 
@@ -27,7 +28,7 @@ export default function Home() {
         <UpdateCurrentTimeButton />
       </div>
 
-      <Suspense fallback={<div>Loading cookies...</div>}>
+      <Suspense fallback={<Skeleton />}>
         <div className="bg-zinc-900 rounded-md">
           <GetUserCookies />
           <UpdateCookies />
