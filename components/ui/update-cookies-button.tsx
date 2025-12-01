@@ -1,4 +1,4 @@
-import { onUpdateCookies } from '@/app/actions/on-update-cookies-action'
+import { onUpdateCookies } from '@/actions/on-update-cookies-action'
 
 export default function UpdateCookies() {
   return (

@@ -5,9 +5,9 @@ import {
   CurrentTimeWithUseCacheAndCacheLife,
   CurrentTimeWithUseCacheAndCacheTag,
   GetUserCookies,
-} from './components/fetchers/current-time-fetchers'
-import UpdateCookies from './components/ui/update-cookies-button'
-import UpdateCurrentTimeButton from './components/ui/update-current-time-button'
+} from '../components/fetchers/current-time-fetchers'
+import UpdateCookies from '../components/ui/update-cookies-button'
+import UpdateCurrentTimeButton from '../components/ui/update-current-time-button'
 
 export default function Home() {
   return (

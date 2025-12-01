@@ -1,4 +1,4 @@
-import { onUpdateCurrentTag } from '@/app/actions/on-update-current-tag-action'
+import { onUpdateCurrentTag } from '@/actions/on-update-current-tag-action'
 
 export default function UpdateCurrentTimeButton() {
   return (

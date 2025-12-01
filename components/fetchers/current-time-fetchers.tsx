@@ -34,5 +34,3 @@ export async function GetUserCookies() {
   const formatCookies = JSON.stringify(dateCookie, null, 2)
   return <CardCurrentTime title="Get cookies" value={formatCookies} />
 }
-
-export async function onUpdateUserCookies() {}

@@ -1,5 +1,6 @@
 import { cacheLife, cacheTag } from 'next/cache'
-import { BASE_URL } from '../const/base-url'
+
+const BASE_URL = 'http://localhost:3000/api/current-time'
 
 export async function fetchCurrentTimeNoCache() {
   const response = await fetch(BASE_URL)
